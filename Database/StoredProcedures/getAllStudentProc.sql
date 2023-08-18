@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getAllStudentProc
+AS 
+BEGIN
+SELECT * FROM studentTable
+END;
