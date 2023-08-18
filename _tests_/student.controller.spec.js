@@ -26,7 +26,7 @@ describe("Student Fee Management",()=>{
         const studentBalance = 500;
     
         const response = await request(app)
-          .put(`/students/${studentId}/fee`)
+          .put(`/student/${studentId}/fee`)
           .send({ studentBalance });
     
         expect(response.status).toBe(200);

@@ -1,4 +1,4 @@
-###create syudent
+###create student
 POST http://localhost:5200/student
 Content-Type: application/json
 
@@ -7,3 +7,28 @@ Content-Type: application/json
     "studentClass":"10A",
     "studentBalance":"5000"
 }
+
+
+###Get All students
+GET http://localhost:5200/student 
+
+
+
+
+###get One student 
+GET http://localhost:5200/student/27ee2859-dbe8-4848-968f-1663c3ebf9b5 
+
+
+
+###Update balance
+PUT http://localhost:5200/student/27ee2859-dbe8-4848-968f-1663c3ebf9b5 
+Content-Type: application/json
+
+{
+    "studentBalance":"1000"
+} 
+  
+
+###Delete a student 
+DELETE http://localhost:5200/student/27ee2859-dbe8-4848-968f-1663c3ebf9b5 
+
