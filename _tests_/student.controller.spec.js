@@ -1,15 +1,14 @@
 import request from 'supertest'
 import app from '../server'
-import { describe } from 'yargs'
-import { it } from 'node:test'
+
 
 describe("Student Fee Management",()=>{
-    //creating a todo
+    
     it("Should create a Student",async()=>{
         const newStudent = {
             studentId:'98tgbyg7gi6567',
             studentName: 'David Munyiri',
-            studentClass: '10A',
+            studentClass: '4north',
             studentBalance: 1000,
           };
       
