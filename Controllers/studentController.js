@@ -1,5 +1,6 @@
 const {v4}=require('uuid')
 const mssql=require('mssql');
+const { sqlConfig } = require('../Config/config');
 
 
 const createStudent=async(req,res)=>{
@@ -60,7 +61,7 @@ const getOneStudent=async(req,res)=>{
         
       const pool=await mssql.connect(sqlConfig)
         
-         const note=(await pool.request()
+         const student=(await pool.request()
             .input('studentId',studentId)
             .execute('getOneStudentProc')).recordset 
 
@@ -74,7 +75,7 @@ const getOneStudent=async(req,res)=>{
 const getAllstudents=async(req,res)=>{
     try {
     const pool=await mssql.connect(sqlConfig)
-    const notes=(await pool.request()
+    const students=(await pool.request()
         .execute('getAllStudentProc')).recordset 
         return res.status(200).json({students})
      

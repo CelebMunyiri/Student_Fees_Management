@@ -1,0 +1,9 @@
+###create syudent
+POST http://localhost:5200/student
+Content-Type: application/json
+
+{
+    "studentName":"Abdul",
+    "studentClass":"10A",
+    "studentBalance":"5000"
+}
